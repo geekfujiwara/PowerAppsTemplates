@@ -16,15 +16,21 @@ App.OnStart は開発画面では何度でも手動で実行することがで�
 コードを説明します。こちらはご自身のデータソースに置き換えることで、データを記録できるサービスに変更することができます。
 
 #### お知らせ
+![image](https://user-images.githubusercontent.com/96101315/236048635-83c5f650-fca6-439a-b1e1-c903a0ed6b2d.png)
+
 トップ画面に表示しているお知らせのデータソースを作成しています。
 ```JavaScript
 // お知らせの内容
 Set(_NotifyMessage, "5月10日は終日メンテナンスです。");
 ```
-ご自身のデータソースに変更する場合。最新のお知らせ一軒を撮ってきて表示するようにしてもいいでしょう。
-例えば、`First(データソース名).Title`のような形式でSharePointリストであればタイトルにお知らせが入っているような形式にしてもよいと思います。
 
+ご自身のデータソースに変更する場合。最新のお知らせ一件をとってきて表示するのはいかがでしょうか。
+例えば、`First(データソース名).Title`のような形式でSharePointリストのタイトルのお知らせ情報を撮ってくる仕組みとしても良いでしょう。
 
+#### 機能の設定
+![image](https://user-images.githubusercontent.com/96101315/236048780-66b0f5b7-8ad3-449d-b36c-9a0d436b7853.png)
+Gallery形式で表示している機能一覧をコレクションとして格納しています。`Name` は機能名です。
+機能ごとにアクセス権を設定するために`IsPlannerRole`または`IsApproverRole`で制御しています。次の`// ユーザーの設定`にて権限を持つグループを設定しています。
 ```JavaScript
 //機能の設定
 ClearCollect(_PlanFunctions, 
@@ -38,8 +44,9 @@ ClearCollect(_CountFunctions,
     {Name:"棚卸の参照", IsApproverRole:false}
 );
 ```
+#### ユーザーの設定
+ユーザーの設定では権限を持つグループを分けています。いわゆるセキュリティグループを作成しています。
 ```JavaScript
-
 //ユーザーの設定
 ClearCollect(_Operators, User());
 
@@ -49,6 +56,17 @@ ClearCollect(_Planners, User());
 //承認可能なユーザーリスト
 ClearCollect(_Approvers, User());
 ```
+もし、こちらをデータソースとしてSharePoint リストに変更するのであれば`セキュリティグループ`というような名称のリストを作成して、リストのタイトルに`Operators`, `Planners`, `Approvers` として保存します。
+![image](https://user-images.githubusercontent.com/96101315/236051655-c8ec1eb4-d488-4330-9cad-2798f4934245.png)
+
+2つ目のリストとして、例えば`アクセス可能ユーザー`というSharePoint リストを作成して、列を2つ追加します。
+`参照`列として先ほどの`セキュリティグループ`リストを設定します。
+
+もう一つ、`ユーザー`列を追加して、それぞれのセキュリティグループごとのユーザーを追加します。
+これにてグループを作成することができます。
+![image](https://user-images.githubusercontent.com/96101315/236052210-6cd5078a-3e16-4566-8891-44bc0f5ca29b.png)
+
+
 ```JavaScript
 // メニューの設定
 ClearCollect(MenuItems,
