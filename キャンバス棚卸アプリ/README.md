@@ -56,7 +56,8 @@ ClearCollect(_Planners, User());
 //承認可能なユーザーリスト
 ClearCollect(_Approvers, User());
 ```
-もし、こちらをデータソースとしてSharePoint リストに変更するのであれば`セキュリティグループ`というような名称のリストを作成して、リストのタイトルに`Operators`, `Planners`, `Approvers` として保存します。
+<details>
+<summary>もし、こちらをデータソースとしてSharePoint リストに変更するのであれば</summary>`セキュリティグループ`というような名称のリストを作成して、リストのタイトルに`Operators`, `Planners`, `Approvers` として保存します。
 ![image](https://user-images.githubusercontent.com/96101315/236051655-c8ec1eb4-d488-4330-9cad-2798f4934245.png)
 
 2つ目のリストとして、例えば`アクセス可能ユーザー`というSharePoint リストを作成して、列を2つ追加します。
@@ -66,9 +67,8 @@ ClearCollect(_Approvers, User());
 これにてグループを作成することができます。完成形は以下のようなリストを想定しています。
 ![image](https://user-images.githubusercontent.com/96101315/236052210-6cd5078a-3e16-4566-8891-44bc0f5ca29b.png)
 
-[!TIP]
 Titleは必須入力をはずしてもいいでしょう。
-
+</details>
 ```JavaScript
 // メニューの設定
 ClearCollect(MenuItems,
