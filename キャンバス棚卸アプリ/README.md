@@ -71,6 +71,10 @@ ClearCollect(_Approvers, User());
 Titleは必須入力をはずしてもいいでしょう。
 </details>
 
+#### メニューの設定
+![image](https://user-images.githubusercontent.com/96101315/236057127-b060ff4e-2e82-4f1b-984d-03900ac34ebc.png)
+
+こちらのメニューはGalleryに表示するために棚卸結果 `_ItemCountingResult`のステータスをコレクションとして宣言しています。
 ```JavaScript
 // メニューの設定
 ClearCollect(MenuItems,
