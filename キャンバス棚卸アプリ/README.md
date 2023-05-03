@@ -57,7 +57,7 @@ ClearCollect(_Planners, User());
 ClearCollect(_Approvers, User());
 ```
 <details>
-<summary>もし、こちらをデータソースとしてSharePoint リストに変更するのであれば</summary>`セキュリティグループ`というような名称のリストを作成して、リストのタイトルに`Operators`, `Planners`, `Approvers` として保存します。
+<summary>もし、こちらをデータソースとしてSharePoint リストに変更するのであれば...</summary>`セキュリティグループ`というような名称のリストを作成して、リストのタイトルに`Operators`, `Planners`, `Approvers` として保存します。
 ![image](https://user-images.githubusercontent.com/96101315/236051655-c8ec1eb4-d488-4330-9cad-2798f4934245.png)
 
 2つ目のリストとして、例えば`アクセス可能ユーザー`というSharePoint リストを作成して、列を2つ追加します。
@@ -69,6 +69,7 @@ ClearCollect(_Approvers, User());
 
 Titleは必須入力をはずしてもいいでしょう。
 </details>
+
 ```JavaScript
 // メニューの設定
 ClearCollect(MenuItems,
@@ -79,6 +80,7 @@ ClearCollect(MenuItems,
 // メニュー数のカウント
 Set(MenuItemCount, CountRows(MenuItems));
 ```
+
 ```JavaScript
 //テーマの設定
 Set(_GeekThemeMainColor, RGBA(6, 138, 216, 1));
