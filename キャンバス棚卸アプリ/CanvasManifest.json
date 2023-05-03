@@ -94,6 +94,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
+    "BindingErrorCount": 0,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "Phone",
@@ -111,7 +112,8 @@
     "LocalDatabaseReferences": "{}",
     "ManualOfflineProfileId": "",
     "Name": "Geek 棚卸アプリ",
-    "OriginatingVersion": "1.330"
+    "OriginatingVersion": "1.330",
+    "ParserErrorCount": 0
   },
   "PublishInfo": {
     "AppName": "Geek 棚卸アプリ",

@@ -344,7 +344,7 @@ CountCreateScreen As screen:
                 },
                 
                 // ブランクチェック
-                If(IsBlank(ItemComboBox1.Selected), 
+                If(IsBlank(ItemComboBox1.Selected.Name), 
                     Notify("品目番号を入力してください", NotificationType.Error),
                     // 棚卸計画にて新しい品目かのチェック
                     If(IsNewItemInPlan,
