@@ -60,3 +60,9 @@ ZIP形式のままアップロードします。
 ![image](https://user-images.githubusercontent.com/96101315/236041262-49975724-26be-453b-9666-af271b57ae91.png)
 
 以上でインポート作業は完了です。
+
+# 利用方法
+それぞれの利用方法をディレクトリにまとめています。
+
+[キャンバス棚卸アプリ](https://github.com/geekfujiwara/PowerAppsTemplates/tree/main/%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%90%E3%82%B9%E6%A3%9A%E5%8D%B8%E3%82%A2%E3%83%97%E3%83%AA)
+
