@@ -29,10 +29,34 @@ Microsoft 公式のマニュアルが提供されています。
 
 以下の手順でインポートを行うことができます。
 
+##インポートする環境の選択
+
 ### Maker ポータルにアクセス
 Power Apps Maker ポータルにアクセスします。
 [https://make.powerapps.com/](https://make.powerapps.com/)
 
+### 環境の切り替え
+インポートする環境を選択します。
+![03](https://user-images.githubusercontent.com/96101315/236039165-3b7c6925-e2a4-4e72-aa51-d9081a92b9ba.png)
 
+## ソリューションのインポート
+### アップロード
+アプリのタブにアクセスし、インポートを行います。
+![04](https://user-images.githubusercontent.com/96101315/236039157-cbd4a4c9-c438-427f-a746-f74eb5a3c8b9.png)
 
+アップロードをクリックして先ほどダウンロードしたファイルをアップロードします。
+ZIP形式のままアップロードします。
+![05](https://user-images.githubusercontent.com/96101315/236039155-33c3ee41-6301-40c2-81a8-9508842a1fc7.png)
 
+### インポート
+詳細を確認してインポートをクリックします。
+![06](https://user-images.githubusercontent.com/96101315/236039143-430a21fc-7c84-43d1-b60a-b165278fad0a.png)
+
+## 動作の確認
+インポート後の画面でインポート完了を待ち、アプリを開くボタンをクリックして起動します。
+![07](https://user-images.githubusercontent.com/96101315/236040811-74e2554c-ae6d-49e0-aa50-c5d99c763408.png)
+
+アプリが起動します。この例はGeek 棚卸アプリでの起動例です。
+![image](https://user-images.githubusercontent.com/96101315/236041262-49975724-26be-453b-9666-af271b57ae91.png)
+
+以上でインポート作業は完了です。
