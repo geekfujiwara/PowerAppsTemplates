@@ -4,7 +4,7 @@
 ![image](https://user-images.githubusercontent.com/96101315/236043097-3206681f-d2ba-41f7-8006-68be3ec5ae5f.png)
 
 ## App.OnStart
-```App.OnStart.PowerFx
+```PowerFx:App.OnStart
 // お知らせの内容
 Set(_NotifyMessage, "5月10日は終日メンテナンスです。");
 
