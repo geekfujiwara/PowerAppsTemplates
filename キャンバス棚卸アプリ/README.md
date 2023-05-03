@@ -16,8 +16,7 @@ App.OnStart は開発画面では何度でも手動で実行することがで�
 コードを説明します。こちらはご自身のデータソースに置き換えることで、データを記録できるサービスに変更することができます。
 
 #### お知らせ
-![image](https://user-images.githubusercontent.com/96101315/236048635-83c5f650-fca6-439a-b1e1-c903a0ed6b2d.png)
-
+![image](https://user-images.githubusercontent.com/96101315/236059339-c92da421-90e0-4aa2-ae30-df875daa47f5.png)
 トップ画面に表示しているお知らせのデータソースを作成しています。
 ```JavaScript
 // お知らせの内容
@@ -28,7 +27,7 @@ Set(_NotifyMessage, "5月10日は終日メンテナンスです。");
 例えば、`First(データソース名).Title`のような形式でSharePointリストのタイトルのお知らせ情報を撮ってくる仕組みとしても良いでしょう。</details>
 
 #### 機能の設定
-![image](https://user-images.githubusercontent.com/96101315/236048780-66b0f5b7-8ad3-449d-b36c-9a0d436b7853.png)
+![image](https://user-images.githubusercontent.com/96101315/236059200-d9174ed0-3b98-4036-8ecd-8bed2ff6ac69.png)
 Gallery形式で表示している機能一覧をコレクションとして格納しています。`Name` は機能名です。
 機能ごとにアクセス権を設定するために`IsPlannerRole`または`IsApproverRole`で制御しています。次の`// ユーザーの設定`にて権限を持つグループを設定しています。
 ```JavaScript
