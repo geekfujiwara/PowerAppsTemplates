@@ -66,7 +66,7 @@ ClearCollect(_Approvers, User());
 これにてグループを作成することができます。完成形は以下のようなリストを想定しています。
 ![image](https://user-images.githubusercontent.com/96101315/236052210-6cd5078a-3e16-4566-8891-44bc0f5ca29b.png)
 
-:::note info
+::: note
 Titleは必須入力をはずしてもいいでしょう。
 :::
 
