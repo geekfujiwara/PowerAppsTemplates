@@ -64,7 +64,7 @@ ClearCollect(_Approvers, User());
 
 もう一つ、`ユーザー`列を追加して、それぞれのセキュリティグループごとのユーザーを追加します。
 これにてグループを作成することができます。
-![image](https://user-images.githubusercontent.com/96101315/236052210-6cd5078a-3e16-4566-8891-44bc0f5ca29b.png 200)
+![image](https://user-images.githubusercontent.com/96101315/236052210-6cd5078a-3e16-4566-8891-44bc0f5ca29b.png)
 
 
 ```JavaScript
