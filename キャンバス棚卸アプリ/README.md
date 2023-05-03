@@ -58,6 +58,7 @@ ClearCollect(_Approvers, User());
 ```
 <details>
 <summary>もし、こちらをデータソースとしてSharePoint リストに変更するのであれば...</summary>`セキュリティグループ`というような名称のリストを作成して、リストのタイトルに`Operators`, `Planners`, `Approvers` として保存します。
+
 ![image](https://user-images.githubusercontent.com/96101315/236051655-c8ec1eb4-d488-4330-9cad-2798f4934245.png)
 
 2つ目のリストとして、例えば`アクセス可能ユーザー`というSharePoint リストを作成して、列を2つ追加します。
