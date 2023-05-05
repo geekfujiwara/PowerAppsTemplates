@@ -44,7 +44,7 @@ CountCreateScreen As screen:
         HoverContentColor: =Color.White
         HoverFillColor: =ColorFade(_GeekThemeMainColor, -20%)
         OnScan: |-
-            =ForAll(Self.Barcodes, Collect(_ItemCountingResult, {ItemNo: ThisRecord.Value, Status:"New"}))
+            =ForAll(Self.Barcodes, Patch(_ItemCountingResult, Defaults(_ItemCountingResult), {ItemNo: ThisRecord.Value, PlanName:AisleGallery.Selected.PlanName, Status:"New"}))
         PressedBorderColor: =RGBA(56, 96, 178, 1)
         PressedContentColor: =ColorFade(_GeekThemeMainColor, -20%)
         PressedFillColor: =RGBA(255, 255, 255, 1)
