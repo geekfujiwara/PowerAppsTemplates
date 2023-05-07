@@ -2,7 +2,9 @@
 Power Apps のテンプレートを公開しています。
 キャンバスアプリやモデル駆動型アプリのテーマ別ソリューションを提供していきます。
 
-詳しい使い方は[YouTube](https://www.youtube.com/@geekfujiwara) で公開しています。
+詳しい使い方は[YouTube](https://youtu.be/5u8ibWLOVKA) で公開しています。
+
+ブログでは[こちら](https://www.geekfujiwara.com/tech/powerplatform/2985/)で紹介しております。
 
 
 # テンプレートのインポート方法
