@@ -1,0 +1,271 @@
+PlanViewScreen As screen:
+    Fill: =RGBA(237, 237, 237, 1)
+
+    HeaderHTML1_4 As htmlViewer:
+        Fill: =RGBA(2, 2, 5, 0)
+        Font: =Font.'Segoe UI'
+        Height: =121
+        HoverBorderColor: =Color.Red
+        HtmlText: |-
+            ="<div class='btn-square-shadow' style='
+                background: #068ad8;
+                color: #FFF;
+                padding-top: 20px;
+                height: "&Self.Height -30&"px;
+                width:"&Self.Width&"px;
+                box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+                border-radius:0px;
+                border-buttom: 5px;
+                text-align: center;
+                '>
+            "&Self.Tooltip&" </div>"
+        PaddingBottom: =0
+        PaddingLeft: =
+        PaddingRight: =
+        PaddingTop: =0
+        Size: =24
+        Tooltip: ="棚卸計画の参照"
+        Width: =640
+        ZIndex: =1
+
+    MainGallery1_4 As gallery.galleryVertical:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        DelayItemLoading: =true
+        Fill: =_GeekThemeBackgroundColor
+        Height: =632
+        Items: =Filter(ItemCountingPlan, IsBlank(TextSearchBox1_3) || StartsWith(PlanName, TextSearchBox1_3.Text))
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        ShowScrollbar: =false
+        TemplateSize: =150
+        Y: =411
+        ZIndex: =2
+
+        MainGalleryHtml1_4 As htmlViewer:
+            Height: =150
+            HtmlText: |-
+                ="<div style=""padding: 0px 15px 5px 5px;height:100%;position:absolute;width:100%;box-sizing:border-box;""><div style=""background-color:#fff;box-shadow:0px 2px 4px rgba(0,0,0,0.14),0px 0px 2px rgba(0,0,0, 0.12);border-radius:15px;height:100%;width:100%;cursor:pointer;""></div></div>"
+            Width: =630
+            ZIndex: =1
+
+        MainGalleryLabel1_4 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =150
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: |-
+                ="棚卸計画名: "&ThisItem.PlanName &Char(10) &"計画日: "&ThisItem.PlanDate &Char(10) & "担当者: " & ThisItem.Operator.DisplayName
+            Width: =391
+            X: =158
+            ZIndex: =2
+
+        Button1 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(162, 162, 162, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =54
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+            OnSelect: =Select(Parent)
+            Size: =16
+            Text: =ThisItem.AisleNo
+            Width: =117
+            X: =27
+            Y: =18
+            ZIndex: =3
+
+        Button1_1 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =If(ThisItem.Status = "計画済", ColorFade(_GeekThemeMainColor, -50%), ColorFade(_GeekThemeMainColor,0%))
+            FontWeight: =FontWeight.Semibold
+            Height: =54
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+            OnSelect: =Select(Parent)
+            Size: =16
+            Text: =ThisItem.Status
+            Width: =117
+            X: =27
+            Y: =82
+            ZIndex: =4
+
+    TextSearchBox1_3 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =""
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =68
+        HintText: ="棚卸計画名で検索"
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        PaddingLeft: =70
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =7
+        RadiusTopLeft: =0
+        RadiusTopRight: =7
+        Size: =21
+        Width: =Parent.Width
+        Y: =341
+        ZIndex: =3
+
+    TextSearchIcon1_3 As icon.Search:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 89, 178, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =TextSearchIcon1_3.Width
+        Icon: =Icon.Search
+        PaddingBottom: =14
+        PaddingLeft: =14
+        PaddingRight: =14
+        PaddingTop: =14
+        Tooltip: ="検索"
+        Width: =TextSearchBox1_3.Height
+        X: =TextSearchBox1_3.X
+        Y: =341
+        ZIndex: =4
+
+    TextSearchRectangle1_3 As rectangle:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Fill: =RGBA(0, 89, 178, 1)
+        Height: =2
+        Width: =Parent.Width
+        Y: =409
+        ZIndex: =5
+
+    Icon3_2 As icon.ChevronLeft:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(250, 250, 250, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =0
+        Height: =88
+        HoverBorderColor: =ColorFade(_GeekThemeMainColor, 20%)
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Navigate(HomeScreen, ScreenTransition.UnCover)
+        PaddingBottom: =20
+        PaddingLeft: =10
+        PaddingRight: =10
+        PaddingTop: =20
+        Width: =88
+        ZIndex: =9
+
+    Button3_2 As button:
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =_GeekThemeMainColor
+        FontWeight: =FontWeight.Semibold
+        Height: =93
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(_GeekThemeMainColor, -20%)
+        OnSelect: =Navigate(CountAislesScreen, ScreenTransition.Cover)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =24
+        Text: ="棚卸実施"
+        Width: =640
+        Y: =1043
+        ZIndex: =17
+
+    NotifyLabel_5 As label:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =94
+        PaddingBottom: =10
+        PaddingLeft: =10
+        PaddingRight: =10
+        PaddingTop: =10
+        Size: =21
+        Text: ="棚卸計画を参照できます。棚卸を実施する場合下のボタンをクリックします。"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =614
+        X: =13
+        Y: =121
+        ZIndex: =18
+
+    ProgressChartGroup1_2 As group:
+        Height: =5
+        Width: =5
+        X: =13
+        Y: =20
+        ZIndex: =23
+
+        Rectangle2_4 As rectangle:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderStyle: =BorderStyle.None
+            DisplayMode: =DisplayMode.View
+            Fill: =ColorFade(_GeekThemeMainColor, 50%)
+            Height: =48
+            Width: =614
+            X: =13
+            Y: =269
+            ZIndex: =19
+
+        Rectangle2_5 As rectangle:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderStyle: =BorderStyle.None
+            DisplayMode: =DisplayMode.View
+            Fill: =_GeekThemeMainColor
+            Height: =48
+            Width: |-
+                =With({
+                    AllItem:CountRows(ItemCountingPlan),
+                    DoneItem:CountRows(Filter(ItemCountingPlan, Status = "完了"))
+                },
+                    IfError(DoneItem/AllItem,0)*614
+                )
+            X: =13
+            Y: =269
+            ZIndex: =20
+
+        Label3_2 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =48
+            Size: =21
+            Text: |-
+                =With({
+                    AllItem:CountRows(ItemCountingPlan),
+                    DoneItem:CountRows(Filter(ItemCountingPlan, Status = "完了"))
+                },
+                    Text(IfError(DoneItem/AllItem,0)*100, "0%")
+                )
+            Width: =560
+            X: =13
+            Y: =269
+            ZIndex: =21
+
+        Label5_5 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =57
+            Size: =21
+            Text: ="棚卸計画の完了率"
+            Width: =614
+            X: =13
+            Y: =212
+            ZIndex: =22
+
