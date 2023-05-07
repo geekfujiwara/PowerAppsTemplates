@@ -1,0 +1,43 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |+
+        =//機能の設定
+        ClearCollect(_PlanFunctions, 
+            {Name:"棚卸計画の作成", IsPlannerRole:true},
+            {Name:"棚卸計画の参照", IsPlannerRole:false},
+            {Name:"棚卸計画の削除", IsPlannerRole:true}
+        );
+        
+        ClearCollect(_CountFunctions, 
+            {Name:"棚卸の実施", IsApproverRole:false}, 
+            {Name:"棚卸の参照", IsApproverRole:false}
+        );
+        
+        // メニューの設定
+        ClearCollect(_MenuItems,
+        {No:1, Name:"ドラフト"},
+        {No:2, Name:"申請済"},
+        {No:5, Name: "完了"});
+         
+        // メニュー数のカウント
+        Set(MenuItemCount, CountRows(_MenuItems));
+        
+        //テーマの設定
+        Set(_GeekThemeMainColor, RGBA(6, 138, 216, 1));
+        Set(_GeekThemeBackgroundColor, RGBA(237, 237, 237, 1));
+        
+        
+        
+        
+        
+        
+        
+        
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+
