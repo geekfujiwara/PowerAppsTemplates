@@ -403,17 +403,6 @@
     "Rectangle2_5": {},
     "ShinseiButton": {},
     "ShouninButton": {},
-    "Teams": {
-      "Data": {
-        "Type": {
-          "EnumString": "",
-          "Kind": "Table",
-          "Name": "Root",
-          "Type": []
-        },
-        "Version": "1.330"
-      }
-    },
     "TextInput1": {},
     "TextInput1_1": {},
     "TextInput3": {},
