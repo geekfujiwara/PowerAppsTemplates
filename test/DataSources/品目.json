@@ -1,0 +1,102 @@
+[
+  {
+    "DisplayName": "品目 (ビュー)",
+    "Name": "_geek_itemmaster_views",
+    "RelatedEntityName": "品目",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "3f043170-5c0d-4bcc-af51-43a7d8082755": "非アクティブな品目",
+      "4d843d22-1ced-4c93-a9b7-902047b56efa": "品目検索ダイアログ ビュー",
+      "4dfa2b82-f48b-43e8-9947-ed9296728368": "品目の高度な検索ビュー",
+      "5fef4bf9-21b4-4442-bd87-3dbc6f00656b": "品目関連ビュー",
+      "c4320c32-e0c0-440b-9b97-b1c036fd9905": "アクティブな品目"
+    }
+  },
+  {
+    "DisplayName": "状態 (品目)",
+    "Name": "geek_itemmaster_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "アクティブ",
+      "1": "非アクティブ"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "品目"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "品目",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "ステータス (品目)",
+    "Name": "geek_itemmaster_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "アクティブ",
+      "2": "非アクティブ"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "品目"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "品目",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "geek_itemmasters",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "geek_itemmaster",
+    "MaxGetRowsCount": 500,
+    "Name": "品目",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "所有者",
+      "createdby": "作成者",
+      "createdon": "作成日",
+      "createdonbehalfby": "作成者 (代理)",
+      "exchangerate": "為替レート",
+      "geek_cost": "原価額",
+      "geek_cost_base": "原価額 (基本)",
+      "geek_itemmaster_AsyncOperations": "システム ジョブ ",
+      "geek_itemmaster_BulkDeleteFailures": "一括削除の失敗 ",
+      "geek_itemmaster_DuplicateBaseRecord": "レコードの重複  (geek_itemmaster_DuplicateBaseRecord)",
+      "geek_itemmaster_DuplicateMatchingRecord": "レコードの重複  (geek_itemmaster_DuplicateMatchingRecord)",
+      "geek_itemmaster_MailboxTrackingFolders": "メールボックス自動追跡フォルダー",
+      "geek_itemmaster_PrincipalObjectAttributeAccesses": "フィールド共有 ",
+      "geek_itemmaster_ProcessSession": "プロセス セッション",
+      "geek_itemmaster_SyncErrors": "同期エラー",
+      "geek_itemmasterid": "品目GUID",
+      "geek_name": "品目名",
+      "geek_no": "品目番号",
+      "importsequencenumber": "インポート シーケンス番号",
+      "modifiedby": "修正者",
+      "modifiedon": "修正日",
+      "modifiedonbehalfby": "修正者 (代理)",
+      "overriddencreatedon": "レコード作成日",
+      "owningbusinessunit": "所属部署",
+      "owningteam": "所有チーム",
+      "owninguser": "所有ユーザー",
+      "statecode": "状態",
+      "statuscode": "ステータス",
+      "timezoneruleversionnumber": "タイム ゾーン規則のバージョン番号",
+      "transactioncurrencyid": "通貨",
+      "utcconversiontimezonecode": "UTC 変換タイム ゾーン コード",
+      "versionnumber": "バージョン番号"
+    },
+    "PreferredName": "品目",
+    "Type": "NativeCDSDataSourceInfo"
+  }
+]
